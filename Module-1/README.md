@@ -1,17 +1,17 @@
-# Module 1: Proofs & Existence
+# Module 1: Proofs, Puzzles & Computer Search
 
-This module covers foundational proof strategies, the power of examples, impossibility proofs, and existence puzzles.
+This combined module covers foundational proof strategies, chessboard puzzles, optimization problems, and computer search algorithms along with their Python implementations.
 
 ## 📚 Topics & Puzzles Covered
 
-### 1. Proof Strategies & Impossibility
-* **Proof by Example:** Demonstrating a mathematical property by constructing a single valid instance.
-* **Impossibility Proofs & Invariants:** 
-  * Using structural properties (like even/odd numbers or black/white chessboard tiles) to prove that certain states can never be reached.
-  * **Key Puzzle:** *Tile a Chessboard* (analyzing why removing opposite corners of a chessboard makes it impossible to tile with standard dominoes).
+### 1. Proofs & Existence
+* **Proof Strategies:** Proof by example, impossibility proofs, and reasoning with invariants.
+* **Chessboard Tiling Puzzle:** Proving why tiling a mutilated chessboard (with missing corners of the same color) using dominoes is impossible.
+* **Existence Puzzles:** Splitting shapes into congruent parts (e.g., octagon splitting).
 
-### 2. Existence & Construction
-* **Existence Proofs:** Proving that a specific configuration or object exists by explicitly building it.
-* **Key Puzzles & Assignments:**
-  * *Two Congruent Parts:* Dividing shapes into equal, matching segments.
-  * *Splitting an Octagon:* Examining valid geometric divisions.
+### 2. Magic Squares, Optimality & Computer Search
+* **Magic Squares:** Multiplicative magic squares and integer linear combinations.
+* **Optimality on Chessboards:** Finding the maximum number of rooks, knights, and bishops under specific constraints.
+* **Computer Search & Backtracking (Python Implementations):**
+  * **N-Queens Puzzle:** Permutations, brute-force search, and optimized backtracking algorithms.
+  * **16 Diagonals Puzzle:** Grid-based recursive search for non-overlapping diagonal placements.
