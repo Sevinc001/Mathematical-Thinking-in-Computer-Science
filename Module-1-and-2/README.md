@@ -1,43 +1,55 @@
-# Module 1 & 2: Proofs, Puzzles, Optimality, Recursion & Logic
+# Module 1 & 2: Proofs, Puzzles, Optimality, Magic Squares & Computer Search
 
-This comprehensive folder contains detailed study notes, instructor insights, puzzle breakdowns, and practical Python implementations for the first two combined modules.
-
----
-
-## 🚀 Quick Navigation
-1. [Module 1: Proofs, Puzzles & Computer Search](#-module-1-proofs-puzzles--computer-search)
-2. [Module 2: Recursion, Magic Squares & Algorithms](#-module-2-recursion-magic-squares--algorithms)
+This repository folder contains theoretical breakdowns, teacher notes, graded assignment summaries, and problem-solving strategies for **Modules 1 and 2** of the *Mathematical Thinking in Computer Science* course.
 
 ---
 
-## 🧩 Module 1: Proofs, Puzzles & Computer Search
-
-### 1. Proof Strategies & Impossibility Puzzles
-* **The Mutilated Chessboard Puzzle:** 
-  * *Instructor Note:* Classic example of an **invariant**. If you remove two opposite corner squares of a chessboard, they are always the same color. Since a single domino always covers one black and one white square, covering the remaining 62 squares with 31 dominoes becomes mathematically impossible.
-* **Grid Splitting & Octagon Puzzles:** Analyzing valid and invalid ways to divide geometric shapes into congruent parts.
-
-### 2. Computer Search & Backtracking (Python Projects)
-* **N-Queens Puzzle:** 
-  * *Concept:* Placing $N$ non-attacking queens on an $N \times N$ chessboard.
-  * *Approach:* Moving from naive brute-force permutations to optimized recursive **backtracking** algorithms to prune invalid branches early.
-* **16 Diagonals Puzzle:** 
-  * *Concept:* Grid-based recursive search ensuring diagonals do not overlap or form unintended loops.
+## 📚 Table of Contents
+1. [Module 1: Proofs & Existence](#-module-1-proofs--existence)
+2. [Module 2: Magic Squares, Optimality & Computer Search](#-module-2-magic-squares-optimality--computer-search)
 
 ---
 
-## 🔮 Module 2: Recursion, Magic Squares & Algorithms
+## 🧩 Module 1: Proofs & Existence
 
-### 1. Magic Squares & Integer Linear Combinations
-* **The Magic Square Puzzle:** 
-  * *Concept:* Arranging numbers such that the sums in rows, columns, and diagonals are equal. Exploring multiplicative magic squares and integer linear combinations (e.g., coin exchange problems like 7-florin and 13-florin denominations).
+### 1. Proof Strategies & Invariants
+* **Proof by Example & Impossibility Proofs:** Constructing explicit examples vs. using logical invariants to prove a solution cannot exist.
+* **The Mutilated Chessboard Puzzle:** Proving why removing two opposite corners of the same color makes domino tiling impossible (invariant: equal numbers of black and white tiles required).
+* **Existence & Shapes:** Splitting octagons and shapes into congruent parts.
 
-### 2. Recursion & Mathematical Induction
-* **Classic Puzzles:**
-  * **Hanoi Towers:** The quintessential recursive problem breaking down $N$ disks into sub-problems of $N-1$.
-  * **Number Guessing & Local Maximums:** Finding optimal strategies using divide-and-conquer logic.
-* **Induction Highlights:** Arithmetic series, plane coloring, compound interest, and strengthening inductive hypotheses.
+---
 
-### 3. Logic, Counterexamples & Pigeonhole Principle
-* **"Always Prime" Polynomials:** Exploring why checking finite examples (like Euler's $n^2 - n + 41$) is never enough for a universal proof without rigorous algebraic or counterexample analysis.
-* **Pigeonhole Principle:** Distributing items into boxes, antimagic squares, and handshakes principles.
+## 🔮 Module 2: Magic Squares, Optimality & Computer Search
+
+### 1. Magic Squares & Linear Combinations
+* **$3 \times 3$ Magic Squares:**
+  * *Concept:* Arranging numbers $1$ to $9$ in a $3 \times 3$ grid so that every row, column, and main diagonal sums to $15$.
+  * *Narrowing the Search:* Using algebraic logic to prove the central tile must always be $5$.
+* **Multiplicative Magic Squares:** Grids where the product of elements in rows, columns, and diagonals are equal.
+* **Integer Linear Combinations & Diophantine Equations:**
+  * **Puzzle: Different People Have Different Coins:** Solving coin exchange problems using greatest common divisors (GCD) and linear combinations.
+  * **Puzzle: Free Accommodation:** Determining achievable values through linear combinations of integers.
+* **Graph Logic ("Paths in a Graph" / "Is there..."):** Translating existence puzzles into graph traversals.
+
+---
+
+### 2. Optimality Problems
+* **Number Theory & Subset Optimality:**
+  * **Maximum Number of Two-Digit Integers:** Finding maximal subsets under parity or divisibility rules.
+  * **Subset without $x$ and $100-x$:** Finding the maximum size of a set where no two elements add up to $100$.
+  * **Subset without $x$ and $2x$:** Optimization logic to select the maximum elements without containing any element and its double.
+* **Chessboard Optimality (Placement Constraints):**
+  * **Rooks on a Chessboard:** Maximum non-attacking rooks on an $N \times N$ board is $N$.
+  * **Knights on a Chessboard:** Maximum non-attacking knights on an $N \times N$ board using monochromatic grid partitioning ($\lceil N^2 / 2 \rceil$).
+  * **Bishops on a Chessboard:** Maximum non-attacking bishops on an $N \times N$ board ($2N - 2$).
+
+---
+
+### 3. Computer Search & Backtracking Algorithms
+* **N-Queens Puzzle:**
+  * *Problem:* Placing $N$ non-attacking queens on an $N \times N$ chessboard.
+  * *Brute-Force Search:* Generating all $N!$ permutations and testing validity.
+  * *Backtracking Solution:* Building partial solutions row-by-row and pruning invalid subtrees early.
+* **16 Diagonals Puzzle:**
+  * Placing $16$ non-intersecting diagonals on a $5 \times 5$ grid using recursive backtracking search.
+* **8-Queens Solution Counting:** Calculating all $92$ distinct valid arrangements for $N=8$.
