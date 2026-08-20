@@ -1,22 +1,24 @@
 # Mathematical Thinking in Computer Science
 **Offered by:** UC San Diego  
 
-This repository contains study notes, theoretical breakdowns, problem analyses, and Python implementations for the puzzles, mathematical concepts, and programming assignments covered in the course.
+# Permutations & Search Algorithms
 
-## 🗂️ Course Modules
+I've been going through a course on proofs and algorithms and got kind of
+hooked on the permutation stuff - cycles, parity, that kind of thing. So
+after finishing the [course](https://www.coursera.org/account/accomplishments/certificate/W0LZH8VFQS13)
+I put together a few extra exercises for myself to make sure I actually
+understood it and not just copy-pasted my way through.
 
-### [Module 1 & 2: Proofs, Puzzles, Optimality & Search](./Module-1-and-2/)
-* **Proofs & Existence:** Proof strategies, impossibility proofs, domino tiling, and grid splitting.
-* **Magic Squares & Optimality:** Integer linear combinations and maximum pieces on chessboards.
-* **Computer Search & Backtracking:** Brute-force and backtracking solutions for N-Queens and 16 Diagonals (with Python code).
-* **Recursion & Induction:** Coin problems, Hanoi Towers, arithmetic series, plane coloring, and inductive proofs.
-* **Logic & Pigeonhole Principle:** Counterexamples, proof by contradiction, antimagic squares, and handshakes.
+What's here:
 
-### [Module 3: Double Counting, Invariants & Parity](./Module-3/)
-* **Double Counting:** Sums of rows and columns, homework problems, and chess tournaments.
-* **Invariants & Termination:** Coffee with milk, debugging, merging bank accounts, and Arthur's books termination logic.
-* **Parity (Even and Odd Numbers):** Chessboard pieces, summing digits, switching signs, and recolouring chessboards.
+- `task1-permutation-cycles/` - breaking a permutation into cycles, and
+  figuring out the minimum number of swaps to sort it
+- `task2-8puzzle-solver/` - solving the 8-puzzle with A* search (wanted to
+  try a general search algorithm instead of the manual approach from the course)
+- `task3-permutation-order/` - how many times do you have to apply a
+  permutation before it loops back to itself
 
-### [Module 4: The 15-Puzzle & Permutations](./Module-4/)
-* **Permutations & Parity:** Rules of the 15-puzzle, transpositions, neighbor transpositions, and classifying permutations as even or odd.
-* **Programming the 15-Puzzle:** Checking even permutations, finding sequences of moves, and implementing the full algorithm in Python.
+Each folder has the problem writeup, my solution, and some tests I wrote
+to check myself.
+
+Still learning, so if something looks off feel free to open an issue.
